@@ -101,3 +101,5 @@ Console.WriteLine();
                 }
             }
             Console.WriteLine($"Сумма элементов главной диагонали = {sum}");
+
+ 
