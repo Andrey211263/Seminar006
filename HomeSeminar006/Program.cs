@@ -8,7 +8,7 @@
          Console.WriteLine("43) Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1*x + b1; y = k2*x + b2");
          Console.WriteLine("0) End");
        
-         int numTask = SetNumber("task");
+         int numTask = SetNumber("Enter number task");
        
          switch (numTask)
          {
@@ -24,7 +24,7 @@
 
  int SetNumber(string numberName)
  {
-     Console.Write($"Enter Number {numberName}:");
+     Console.Write($" {numberName}:");
      int num = Convert.ToInt32(Console.ReadLine());
      return num;
  }
