@@ -1,0 +1,15 @@
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.csproj.AssemblyReference.cache
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.GeneratedMSBuildEditorConfig.editorconfig
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.AssemblyInfoInputs.cache
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.AssemblyInfo.cs
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.csproj.CoreCompileInputs.cache
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\bin\Debug\net6.0\Seminar008.exe
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\bin\Debug\net6.0\Seminar008.deps.json
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\bin\Debug\net6.0\Seminar008.runtimeconfig.json
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\bin\Debug\net6.0\Seminar008.dll
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\bin\Debug\net6.0\Seminar008.pdb
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.dll
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\refint\Seminar008.dll
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.pdb
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\Seminar008.genruntimeconfig.cache
+G:\Мои документы\Home\Обучение\Семинары\Семинар_0509\Seminar008\obj\Debug\net6.0\ref\Seminar008.dll

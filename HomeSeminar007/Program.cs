@@ -123,7 +123,7 @@ void SearchPosition(double[,] arrey, int x)
     int colum = arrey.GetLength(1);
     int m = x / 10;
     int n = x % 10;
-    if (m <= line && n <= colum) Console.WriteLine($"искомый элемент [{m}, {n}] {arrey[m, n]}");
+    if (m <= line && n <= colum) Console.WriteLine($"искомый элемент [{m}, {n}] {arrey[m-1, n-1]}");
     else
     {
         Console.WriteLine($"искомый элемент [{m}, {n}] отсутствует");

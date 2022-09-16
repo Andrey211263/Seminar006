@@ -34,37 +34,37 @@
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-Console.Clear();
-Console.WriteLine("Введите число строк: ");
-int line = Convert.ToInt32(Console.ReadLine());
+// Console.Clear();
+// Console.WriteLine("Введите число строк: ");
+// int line = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите число столюцов: ");
-int colum = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число столюцов: ");
+// int colum = Convert.ToInt32(Console.ReadLine());
 
-int[,] matrix = new int[line, colum];
-for(int i = 0; i < line; i++)
-{ 
-for(int j = 0; j < colum; j++)
-{
-    matrix[i,j] = i + j;
-    Console.Write(" "+matrix[i,j]);
-}
-Console.WriteLine();
-}
+// int[,] matrix = new int[line, colum];
+// for(int i = 0; i < line; i++)
+// { 
+// for(int j = 0; j < colum; j++)
+// {
+//     matrix[i,j] = i + j;
+//     Console.Write(" "+matrix[i,j]);
+// }
+// Console.WriteLine();
+// }
 
-// Задача 51: Задайте двумерный массив. Найдите элементы, у 
-// которых оба индекса чётные, и замените эти элементы на их 
-// квадраты.
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// Сумма элементов главной диагонали: 1+9+2 = 12
+// // Задача 51: Задайте двумерный массив. Найдите элементы, у 
+// // которых оба индекса чётные, и замените эти элементы на их 
+// // квадраты.
+// // Например, задан массив:
+// // 1 4 7 2
+// // 5 9 2 3
+// // 8 4 2 4
+// // Сумма элементов главной диагонали: 1+9+2 = 12
 
 
-Данил Зерин
+// //Данил Зерин
 
-//Задача 51
+// //Задача 51
             Console.Write("Введите количество строк: ");
             int m = int.Parse(Console.ReadLine());
             Console.Write("Введите количество столбцов: ");
