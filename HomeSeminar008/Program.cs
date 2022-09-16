@@ -56,7 +56,7 @@ int[,] IntMatrix()
 }
 
 
-int[,]  IntMatrixFix(int line, int colum)
+int[,] IntMatrixFix(int line, int colum)
 {
     // int line = 3;
     // int colum = 3;
@@ -187,9 +187,9 @@ void MatrixProduct()
     int column1 = SetNumber("Введите количество столбцов матрицы А");
     int column2 = SetNumber("Введите количество столбцов матрицы В");
     int[,] Array1 = IntMatrixFix(line1, column1);
-       Console.WriteLine();
+    Console.WriteLine();
     int[,] Array2 = IntMatrixFix(column1, column2);
-        int[,] newArray = new int[line1, column2];
+    int[,] newArray = new int[line1, column2];
     for (int i = 0; i < line1; i++)
     {
         int j = 0; int m = 0;
@@ -197,9 +197,9 @@ void MatrixProduct()
         for (int n = 0; n < column2; n++)
         {
             //newArray[i, n] = Array1[i, j] * Array2[m, n] + Array1[i, j + 1] * Array2[m + 1, n] + Array1[i, j + 2] * Array2[m + 2, n];
-            for(int k =0; k < colum; k++ )
+            for (int k = 0; k < colum; k++)
             {
-            newArray[i, n] = newArray[i, n] + Array1[i, j + k] * Array2[m+k, n];
+                newArray[i, n] = newArray[i, n] + Array1[i, j + k] * Array2[m + k, n];
             }
 
 
@@ -252,7 +252,7 @@ void MatrixCub()
                             {
                                 Cub[i, j, h] = new Random().Next(10, 99);
                                 bufer[m] = Cub[i, j, h];
-                               // Console.Write($"Перезапись {Cub[i, j, h]} ({i},{j},{h})");
+                                // Console.Write($"Перезапись {Cub[i, j, h]} ({i},{j},{h})");
                                 break;
                             }
 
@@ -263,7 +263,6 @@ void MatrixCub()
 
                 }
                 m++;
-                // Console.WriteLine($"Bufer = {String.Join(" ", bufer)}");
             }
 
             Console.WriteLine();
@@ -282,20 +281,7 @@ void MatrixCub()
 // 11 16 15 06
 // 10 09 08 07
 
-// int[,] ulitka(int[,] array, int k, int line, int column, int direction)
-// {
-//     switch (direction)
-//     {
-//         case 00: leftR(); break;             //направление движения слева на право
-//         case 01: down(); break;          //направление движения с верху вниз
-//         case 02: reach(); break;        //направление движения  с право на лево
-//         case 03: up(); break;    //направление движения с низу вверх
-//         //case 60: MatrixCub(); break;
-//         // default: Console.WriteLine("error"); break;
-//     }
-// //направление движения слева на право
-//int[,] leftR()
-//if (line == 0 && column == 0) 
+
 void MetodUlitka()
 {
     int line = SetNumber("Введите количество строк ");
@@ -354,7 +340,7 @@ void MetodUlitka()
 
     }
     //Console.WriteLine($"index i = {i}, j = {j}, k = {k}, pass ={pass}");
-    if (line % 2 != 0) MatrixUl[i-1, j-1] = count; // проверяем четниая матрица или нет
+    if (line % 2 != 0) MatrixUl[i - 1, j - 1] = count; // проверяем четниая матрица или нет
     PrintArray(MatrixUl);
 }
 
