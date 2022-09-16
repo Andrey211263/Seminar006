@@ -56,10 +56,10 @@ int[,] IntMatrix()
 }
 
 
-int[,] IntMatrixFix()
+int[,]  IntMatrixFix(int line, int colum)
 {
-    int line = 3;
-    int colum = 3;
+    // int line = 3;
+    // int colum = 3;
     int[,] array = new int[line, colum];
     for (int i = 0; i < line; i++)
     {
@@ -183,16 +183,26 @@ void SearchSum()
 
 void MatrixProduct()
 {
-    int[,] Array1 = IntMatrixFix();
-    Console.WriteLine();
-    int[,] Array2 = IntMatrixFix();
-    int[,] newArray = new int[3, 3];
-    for (int i = 0; i < 3; i++)
+    int line1 = SetNumber("Введите количество строк матрицы А ");
+    int column1 = SetNumber("Введите количество столбцов матрицы А");
+    int column2 = SetNumber("Введите количество столбцов матрицы В");
+    int[,] Array1 = IntMatrixFix(line1, column1);
+       Console.WriteLine();
+    int[,] Array2 = IntMatrixFix(column1, column2);
+        int[,] newArray = new int[line1, column2];
+    for (int i = 0; i < line1; i++)
     {
         int j = 0; int m = 0;
-        for (int n = 0; n < 3; n++)
+        int colum = Array1.GetLength(1);
+        for (int n = 0; n < column2; n++)
         {
-            newArray[i, n] = Array1[i, j] * Array2[m, n] + Array1[i, j + 1] * Array2[m + 1, n] + Array1[i, j + 2] * Array2[m + 2, n];
+            //newArray[i, n] = Array1[i, j] * Array2[m, n] + Array1[i, j + 1] * Array2[m + 1, n] + Array1[i, j + 2] * Array2[m + 2, n];
+            for(int k =0; k < colum; k++ )
+            {
+            newArray[i, n] = newArray[i, n] + Array1[i, j + k] * Array2[m+k, n];
+            }
+
+
         }
     }
 
