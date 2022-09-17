@@ -97,6 +97,58 @@ int[,] SortMin(int[,] array)
     return array;
 }
 
+// Сортировка строки - пузырек
+int[] SortLine(int[] array)
+{
+    int line = array.GetLength(0);
+    int temp;
+    for (int i = 0; i < line; i++)
+    {
+        for (int m = 1; m < line - i; m++)
+        {
+            if (array[m - 1] < array[m])
+            {
+                temp = array[m - 1];
+                array[m - 1] = array[m];
+                array[m] = temp;
+            }
+        }
+
+    }
+    return array;
+}
+//поиск дубля - подсчет
+// 
+int[,] DoubleNumber(int[] array)
+{
+    //Console.WriteLine(String.Join(" ", array));
+    int line = array.GetLength(0);
+    int[,] doubleStat = new int[2, line];
+    int j = 0;
+
+    for (int i = 0; i < line; i++)
+    {
+        doubleStat[0, i] = array[i];
+       
+        for (j = i + 1; j < line; j++)
+        {
+
+            if (doubleStat[0, i] == array[j])
+
+            doubleStat[1, i] += 1; 
+            
+        }
+        i = i + doubleStat[1, i];
+        // Console.Write($" {doubleStat[1, i]}");
+
+    }
+   // Console.WriteLine();
+    return doubleStat;
+}
+
+
+
+
 // вывод на печать матрицу
 void PrintArray(int[,] array)
 {
@@ -219,6 +271,24 @@ void MatrixProduct()
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
+// int[] Double(Array[])
+// {
+//     for (int l = 100; l > 0; l--)
+//     {
+//         for (int k = m; k > 0; k--)
+//         {
+//             if (Cub[i, j, h] == bufer[k - 1])
+//             {
+//                 Cub[i, j, h] = new Random().Next(10, 99);
+//                 bufer[m] = Cub[i, j, h];
+
+//                 // Console.Write($"Перезапись {Cub[i, j, h]} ({i},{j},{h})");
+//                 break;
+//             }
+
+//         }
+//     }
+// }
 
 void MatrixCub()
 {
@@ -226,8 +296,9 @@ void MatrixCub()
     int column = SetNumber("Введите количество столбцов");
     int height = SetNumber("Введите высоту");
     int[,,] Cub = new int[line, column, height];
-    int m = 0;
+    int m = 0;                                      //индекс одномерного массива
     int[] bufer = new int[line * column * height];
+    //Console.WriteLine(String.Join(" ", bufer));
 
     for (int i = 0; i < line; i++)
     {
@@ -238,30 +309,23 @@ void MatrixCub()
                 Cub[i, j, h] = new Random().Next(10, 100);
                 Console.Write($" {Cub[i, j, h]} ({i},{j},{h})");
                 bufer[m] = Cub[i, j, h];
-                //проверка заполненого массива на совпадение
-                for (int k = m; k > 0; k--)
+                //проверка заполненого массива на совпадение - делаем 100 прогонов с перегенирацией дубля
+                for (int l = 100; l > 0; l--)
                 {
-                    if (Cub[i, j, h] == bufer[k - 1])
+                    for (int k = m; k > 0; k--)
                     {
-                        Cub[i, j, h] = new Random().Next(10, 99);
-                        bufer[m] = Cub[i, j, h];
-                        // запустим повторную проверку после перезаписи повторяющегося элемента
-                        for (int l = m; l > 0; l--)
+                        if (Cub[i, j, h] == bufer[k - 1])
                         {
-                            if (Cub[i, j, h] == bufer[l - 1])
-                            {
-                                Cub[i, j, h] = new Random().Next(10, 99);
-                                bufer[m] = Cub[i, j, h];
-                                // Console.Write($"Перезапись {Cub[i, j, h]} ({i},{j},{h})");
-                                break;
-                            }
+                            Cub[i, j, h] = new Random().Next(10, 99);
+                            bufer[m] = Cub[i, j, h];
 
+                            // Console.Write($"Перезапись {Cub[i, j, h]} ({i},{j},{h})");
+                            break;
                         }
-                        // конец повторной проверки после перезаписи повторяющегося элемента                       
-                        break;
-                    }
 
+                    }
                 }
+                //конец проверки
                 m++;
             }
 
@@ -270,7 +334,11 @@ void MatrixCub()
         }
     }
     Console.WriteLine();
-
+    //отсортированная матрица на убывание для виз. контроля     
+    //   
+    int[] result = SortLine(bufer) ;
+    // поиск дублей
+    PrintArray(DoubleNumber(result));
 }
 
 
