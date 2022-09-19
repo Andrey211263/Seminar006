@@ -17,8 +17,8 @@ void Start()
             case 0: return; break;
             case 64: NaturalSeries(); break;
             case 66: SumNatural(); break;
-                // case 68: MatrixProduct(); break;
-                // default: Console.WriteLine("error"); break;
+            case 68: Akkerman(); break;
+            default: Console.WriteLine("error"); break;
         }
 
     }
@@ -94,10 +94,10 @@ void SumNatural()
         int count = EndNumber - OneNumber;
         int SumNatural = OneNumber;
 
-        for (int i = 0; i < count; i ++)
+        for (int i = 0; i < count; i++)
         {
             //Console.Write($"{i} -> {OneNumber}, {SumNatural}: ");
-            OneNumber +=1;
+            OneNumber += 1;
             SumNatural = SumNatural + OneNumber;
         }
         Console.WriteLine();
@@ -108,3 +108,20 @@ void SumNatural()
 // Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 
 // m = 2, n = 3 -> A(m,n) = 29
+
+void Akkerman()
+{
+    int m = SetNumber("Введите число m");
+    int n = SetNumber("Введите число n");
+    int number = Akk(n, m);
+    Console.WriteLine(number);
+
+
+    int Akk(int m, int n)
+    {
+        if (n < 0 || m < 0) return -1;
+        if (m == 0) return n + 1;
+        if (n == 0) return Akk(m - 1, 1);
+        return Akk(m - 1, Akk(m, n - 1));
+    }
+}
